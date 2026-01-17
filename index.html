@@ -34,6 +34,11 @@
     "name": "Oxford University Press"
   },
   "url": "https://otischan.dev",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hong Kong",
+    "addressCountry": "HK"
+  },
   "sameAs": [
     "https://github.com/otischan-dev",
     "https://www.linkedin.com/in/otischan-dev/"
@@ -49,7 +54,17 @@
     "WebdriverIO",
     "Playwright",
     "Jest"
-  ]
+  ],
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "name": "ISTQB Certified Tester Foundation Level (CTFL) v4.0",
+    "credentialCategory": "certification",
+    "recognizedBy": {
+      "@type": "Organization",
+      "name": "BCS, The Chartered Institute for IT"
+    },
+    "dateCreated": "2025-10"
+  }
 }
 </script>
     <style>
@@ -191,8 +206,21 @@
         .hero-text .subtitle {
             font-size: 1.5rem;
             color: var(--accent);
-            margin-bottom: 24px;
+            margin-bottom: 8px;
             font-weight: 500;
+        }
+
+        .hero-text .location {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .hero-text .location svg {
+            color: var(--accent);
         }
 
         .hero-text p {
@@ -205,6 +233,39 @@
         .cta-buttons {
             display: flex;
             gap: 16px;
+        }
+
+        .certification-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(34, 211, 238, 0.1);
+            border: 1px solid rgba(34, 211, 238, 0.3);
+            border-radius: 12px;
+            padding: 12px 18px;
+            margin-bottom: 24px;
+        }
+
+        .certification-badge svg {
+            width: 20px;
+            height: 20px;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .certification-info {
+            text-align: left;
+        }
+
+        .certification-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .certification-issuer {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
         }
 
         .btn {
@@ -591,8 +652,15 @@
                 <div class="hero-content">
                     <div class="hero-text">
                         <h1>Hi, I'm <span>Otis Chan</span></h1>
-                        <p class="subtitle">Test Lead @ Oxford University Press</p>
+                        <p class="subtitle">Test Lead @ Oxford University Press</p>\n                        <p class="location\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z\"/></svg> Hong Kong</p>
                         <p>With 6+ years of experience in building robust test frameworks, automation solutions, and quality engineering practices. Passionate about ensuring software excellence through innovative testing strategies.</p>
+                        <div class="certification-badge">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                            <div class="certification-info">
+                                <div class="certification-title">ISTQB Certified Tester Foundation Level (CTFL) v4.0</div>
+                                <div class="certification-issuer">BCS, The Chartered Institute for IT · Oct 2025</div>
+                            </div>
+                        </div>
                         <div class="cta-buttons">
                             <a href="https://github.com/otischan-dev" target="_blank" class="btn btn-primary">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
