@@ -629,6 +629,32 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Legacy Web puzzle Button */
+        .legacy-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background: #c0c0c0;
+            border: 3px outset #dfdfdf;
+            color: #000;
+            font-family: "MS Sans Serif", "Segoe UI", Tahoma, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 1px 1px 0 #000;
+        }
+
+        .legacy-btn:hover {
+            background: #d4d4d4;
+        }
+
+        .legacy-btn:active {
+            border-style: inset;
+            box-shadow: none;
+        }
     </style>
 </head>
 <body>
@@ -738,6 +764,13 @@
             <div class="container">
                 <h2 class="section-title">MiniGames</h2>
                 <p class="section-subtitle">Interactive games and puzzles</p>
+
+                <!-- Legacy Classic Web Puzzle Button -->
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <a href="https://puzzle.otischan.dev" target="_blank" class="legacy-btn">
+                        🔐 Classic Web Puzzle
+                    </a>
+                </div>
                 
                 <div class="project-featured">
                     <div class="project-card project-card-large">
