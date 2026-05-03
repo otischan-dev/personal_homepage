@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Otis Chan 陳煒康 - Test Lead at Oxford University Press & Chinese Chess Player">
+    <title>Otis Chan 陳煒康 | BETA</title>
+    <link rel="canonical" href="https://otischan.dev/">
+    
+    <!-- Open Graph meta tags for social sharing -->
+    <meta property="og:title" content="Otis Chan | Test Lead @ Oxford University Press">
+    <meta property="og:description" content="Test automation expert with 6+ years of experience building robust frameworks.">
+    <meta property="og:image" content="https://otischan.dev/profilepic.webp">
+    <meta property="og:url" content="https://otischan.dev/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Otis Chan | Test Lead @ Oxford University Press">
+    <meta name="twitter:description" content="Test automation expert with 6+ years of experience.">
+    <meta name="twitter:image" content="https://otischan.dev/profilepic.webp">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="profilepic.webp">
+    <link rel="apple-touch-icon" href="profilepic.webp">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Otis Chan",
+  "jobTitle": "Test Lead",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Oxford University Press"
+  },
+  "url": "https://otischan.dev",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hong Kong",
+    "addressCountry": "HK"
+  },
+  "sameAs": [
+    "https://github.com/otischan-dev",
+    "https://www.linkedin.com/in/otischan-dev/"
+  ],
+  "knowsAbout": [
+    "Test Automation",
+    "Quality Engineering",
+    "TypeScript",
+    "JavaScript",
+    "Python",
+    "CI/CD",
+    "DevOps",
+    "WebdriverIO",
+    "Playwright",
+    "Jest"
+  ],
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "name": "ISTQB Certified Tester Foundation Level (CTFL) v4.0",
+    "credentialCategory": "certification",
+    "recognizedBy": {
+      "@type": "Organization",
+      "name": "BCS, The Chartered Institute for IT"
+    },
+    "dateCreated": "2025-10"
+  }
+}
+</script>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #22d3ee;
+            --gradient: linear-gradient(135deg, #6366f1 0%, #22d3ee 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Animated background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .bg-animation::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(34, 211, 238, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 40%, rgba(99, 102, 241, 0.1) 0%, transparent 30%);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(30px, -30px) rotate(5deg); }
+            66% { transform: translate(-20px, 20px) rotate(-5deg); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            padding: 24px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(20px);
+            background: rgba(15, 23, 42, 0.8);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 100px;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 16px;
+            white-space: nowrap;
+        }
+
+        .hero-text h1 span {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 8px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .hero-text .location {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .hero-text .location svg {
+            color: var(--accent);
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            max-width: 500px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+        }
+
+        .certification-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(34, 211, 238, 0.1);
+            border: 1px solid rgba(34, 211, 238, 0.3);
+            border-radius: 12px;
+            padding: 12px 18px;
+            margin-bottom: 24px;
+        }
+
+        .certification-badge svg {
+            width: 20px;
+            height: 20px;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .certification-info {
+            text-align: left;
+        }
+
+        .certification-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .certification-issuer {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 2px solid rgba(148, 163, 184, 0.3);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-card {
+            position: relative;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: var(--gradient);
+            padding: 6px;
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { box-shadow: 0 0 30px rgba(99, 102, 241, 0.4); }
+            to { box-shadow: 0 0 60px rgba(34, 211, 238, 0.4); }
+        }
+
+        .profile-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid var(--bg-dark);
+        }
+
+        /* Skills Section */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 60px;
+            font-size: 1.1rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .skill-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 32px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .skill-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .skill-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .skill-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .skill-tag {
+            background: rgba(99, 102, 241, 0.2);
+            color: var(--accent);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-content {
+            padding: 28px;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 16px;
+        }
+
+        .project-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+
+        .project-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .project-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: var(--accent);
+        }
+
+        .project-lang {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            color: var(--accent);
+        }
+
+        .lang-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .lang-js { background: #f7df1e; }
+        .lang-ts { background: #3178c6; }
+        .lang-go { background: #00add8; }
+        .lang-cpp { background: #f34b7d; }
+
+        /* Featured Project */
+        .project-featured {
+            display: flex;
+            justify-content: center;
+        }
+
+        .project-card-large {
+            max-width: 700px;
+            width: 100%;
+        }
+
+        .project-card-large .project-content {
+            padding: 40px;
+        }
+
+        .project-card-large h3 {
+            font-size: 1.6rem;
+            margin-bottom: 12px;
+        }
+
+        .project-card-large p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .project-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin: 24px 0;
+        }
+
+        .feature-item {
+            color: var(--accent);
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        @media (max-width: 600px) {
+            .project-features {
+                grid-template-columns: 1fr;
+            }
+
+            .project-card-large .project-content {
+                padding: 24px;
+            }
+        }
+
+        /* Contact Section */
+        .contact {
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 32px;
+            background: var(--bg-card);
+            border-radius: 16px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            border-color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-btn svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* QR Code Section */
+        .qr-section {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .qr-card {
+            background: var(--bg-card);
+            border-radius: 24px;
+            padding: 32px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .qr-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient);
+        }
+
+        .qr-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .qr-title {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .qr-title svg {
+            color: var(--accent);
+        }
+
+        .qr-container {
+            background: white;
+            padding: 16px;
+            border-radius: 16px;
+            display: inline-block;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .qr-container img {
+            display: block;
+            width: 160px;
+            height: 160px;
+        }
+
+        .qr-hint {
+            margin-top: 16px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid rgba(148, 163, 184, 0.1);
+            text-align: center;
+            color: var(--text-secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text p {
+                margin: 0 auto 32px;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+            }
+
+            .profile-card {
+                width: 280px;
+                height: 280px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Legacy Web puzzle Button */
+        .legacy-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background: #c0c0c0;
+            border: 3px outset #dfdfdf;
+            color: #000;
+            font-family: "MS Sans Serif", "Segoe UI", Tahoma, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 1px 1px 0 #000;
+        }
+
+        .legacy-btn:hover {
+            background: #d4d4d4;
+        }
+
+        .legacy-btn:active {
+            border-style: inset;
+            box-shadow: none;
+        }
+
+        /* Language toggle */
+        .lang-toggle {
+            display: flex;
+            align-items: center;
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .lang-btn {
+            padding: 6px 14px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: none;
+            background: transparent;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .lang-btn.active {
+            background: var(--gradient);
+            color: white;
+        }
+
+        html[lang="en"] [data-lang="zh"] { display: none !important; }
+        html[lang="zh"] [data-lang="en"] { display: none !important; }
+
+        .beta-badge {
+            display: inline-block;
+            background: rgba(99, 102, 241, 0.2);
+            color: var(--accent);
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-left: 8px;
+            vertical-align: middle;
+            letter-spacing: 0.5px;
+        }
+
+        .champion-photo-placeholder {
+            position: relative;
+            width: 350px;
+            height: 350px;
+            border-radius: 20px;
+            background: var(--bg-card);
+            border: 2px dashed rgba(34, 211, 238, 0.4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+
+        .champion-photo-placeholder svg {
+            width: 80px;
+            height: 80px;
+            color: var(--accent);
+            margin-bottom: 16px;
+            opacity: 0.6;
+        }
+
+        .champion-photo-placeholder span {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .achievement-card {
+            background: var(--bg-card);
+            border-radius: 24px;
+            padding: 40px;
+            border: 1px solid rgba(34, 211, 238, 0.2);
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .achievement-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #FFD700, #FFA500, #FFD700);
+        }
+
+        .achievement-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .achievement-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .achievement-card p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 968px) {
+            .champion-photo-placeholder {
+                width: 280px;
+                height: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <header>
+        <nav class="container">
+            <div class="logo">OC<span class="beta-badge">BETA</span></div>
+            <ul class="nav-links">
+                <li><a href="#about" data-lang="en">About</a><a href="#about" data-lang="zh">關於</a></li>
+                <li><a href="#skills" data-lang="en">Skills</a><a href="#skills" data-lang="zh">技能</a></li>
+                <li><a href="#projects" data-lang="en">Projects</a><a href="#projects" data-lang="zh">成就</a></li>
+                <li><a href="#contact" data-lang="en">Contact</a><a href="#contact" data-lang="zh">聯繫</a></li>
+            </ul>
+            <div class="lang-toggle">
+                <button class="lang-btn active" data-switch="en" onclick="switchLang('en')">EN</button>
+                <button class="lang-btn" data-switch="zh" onclick="switchLang('zh')">中</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="about">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <!-- EN Hero -->
+                        <div data-lang="en">
+                            <h1>Hi, I'm <span>Otis Chan</span></h1>
+                            <p class="subtitle">Test Lead @ Oxford University Press</p>
+                            <p class="location"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Hong Kong</p>
+                            <p>With 6+ years of experience in building robust test frameworks, automation solutions, and quality engineering practices. Passionate about ensuring software excellence through innovative testing strategies.</p>
+                            <div class="certification-badge">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                                <div class="certification-info">
+                                    <div class="certification-title">ISTQB Certified Tester Foundation Level (CTFL) v4.0</div>
+                                    <div class="certification-issuer">BCS, The Chartered Institute for IT · Oct 2025</div>
+                                </div>
+                            </div>
+                            <div class="cta-buttons">
+                                <a href="https://github.com/otischan-dev" target="_blank" class="btn btn-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                    View GitHub
+                                </a>
+                                <a href="https://www.linkedin.com/in/otischan-dev/" target="_blank" class="btn btn-secondary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                    LinkedIn
+                                </a>
+                            </div>
+                        </div>
+                        <!-- ZH Hero -->
+                        <div data-lang="zh">
+                            <h1>大家好 我是<span>陳煒康</span></h1>
+                            <p class="subtitle">業餘中國象棋愛好者</p>
+                            <p class="location"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> 香港</p>
+                            <p>熱愛中國象棋，在棋盤上追求智慧與策略的極致。相信每一步棋都是思維的鍛煉，每一局對弈都是成長的機會。</p>
+                            <div class="certification-badge">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                                <div class="certification-info">
+                                    <div class="certification-title">🏆 趙汝權盃新秀組 冠軍</div>
+                                    <div class="certification-issuer">Champion of Chiu Yu Kwan Cup (Rookie Division)</div>
+                                </div>
+                            </div>
+                            <div class="cta-buttons">
+                                <a href="https://github.com/otischan-dev" target="_blank" class="btn btn-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                    GitHub
+                                </a>
+                                <a href="https://www.linkedin.com/in/otischan-dev/" target="_blank" class="btn btn-secondary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                    LinkedIn
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="profile-card" data-lang="en">
+                            <img src="profilepic.webp" alt="Otis Chan - Test Lead at Oxford University Press">
+                        </div>
+                        <div class="champion-photo-placeholder" data-lang="zh">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                            <span>🏆 冠軍照片</span>
+                            <span style="font-size: 0.8rem; margin-top: 4px; opacity: 0.6;">Champion Photo Placeholder</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="skills">
+            <div class="container">
+                <!-- EN Skills -->
+                <div data-lang="en">
+                    <h2 class="section-title">Skills & Expertise</h2>
+                    <p class="section-subtitle">Technologies and methodologies I work with</p>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-icon">🧪</div>
+                            <h3>Test Automation</h3>
+                            <p>Building comprehensive test frameworks and automation solutions for reliable software delivery.</p>
+                            <div class="skill-tags">
+                                <span class="skill-tag">WebdriverIO</span>
+                                <span class="skill-tag">Jest</span>
+                                <span class="skill-tag">Playwright</span>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">💻</div>
+                            <h3>Programming Languages</h3>
+                            <p>Proficient in multiple languages for building versatile testing and development solutions.</p>
+                            <div class="skill-tags">
+                                <span class="skill-tag">TypeScript</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">Python</span>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">⚙️</div>
+                            <h3>CI/CD & DevOps</h3>
+                            <p>Implementing continuous integration and deployment pipelines for efficient software delivery.</p>
+                            <div class="skill-tags">
+                                <span class="skill-tag">GitHub Actions</span>
+                                <span class="skill-tag">Jenkins</span>
+                                <span class="skill-tag">Docker</span>
+                                <span class="skill-tag">Kubernetes</span>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">📊</div>
+                            <h3>Quality Engineering</h3>
+                            <p>Ensuring software quality through comprehensive testing strategies and best practices.</p>
+                            <div class="skill-tags">
+                                <span class="skill-tag">API Testing</span>
+                                <span class="skill-tag">Frontend Testing</span>
+                                <span class="skill-tag">Performance</span>
+                                <span class="skill-tag">Security</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ZH Skills (象棋) -->
+                <div data-lang="zh">
+                    <h2 class="section-title">象棋技藝</h2>
+                    <p class="section-subtitle">中國象棋方面的技能與心得</p>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-icon">♟️</div>
+                            <h3>佈局研究</h3>
+                            <p>深入研究中國象棋各類開局佈局，掌握先手與後手的戰略要領。</p>
+                            <div class="skill-tags">
+                                <span class="skill-tag">中炮</span>
+                                <span class="skill-tag">飛相局</span>
+                                <span class="skill-tag">仙人指路</span>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">🧠</div>
+                            <h3>中盤戰術</h3>
+                            <p>擅長在中盤複雜局面中尋找突破口，運用戰術組合取得優勢。</p>
+                            <div class="skill-tags">
+                                <span class="skill-tag">棄子攻殺</span>
+                                <span class="skill-tag">牽制戰術</span>
+                                <span class="skill-tag">閃擊</span>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">🎯</div>
+                            <h3>殘局功夫</h3>
+                            <p>精研各類殘局定式，在殘局階段能夠精準計算，把握勝機。</p>
+                            <div class="skill-tags">
+                                <span class="skill-tag">馬兵殘局</span>
+                                <span class="skill-tag">車兵殘局</span>
+                                <span class="skill-tag">炮兵殘局</span>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">📖</div>
+                            <h3>棋譜研讀</h3>
+                            <p>研讀古今名局棋譜，從大師的對弈中汲取經驗與靈感。</p>
+                            <div class="skill-tags">
+                                <span class="skill-tag">橘中秘</span>
+                                <span class="skill-tag">梅花譜</span>
+                                <span class="skill-tag">現代名局</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="minigames">
+            <div class="container">
+                <h2 class="section-title">MiniGames</h2>
+                <p class="section-subtitle">Interactive games and puzzles</p>
+                
+                <div class="project-featured">
+                    <div class="project-card project-card-large">
+                        <div class="project-content">
+                            <div class="project-header">
+                                <div>
+                                    <h3>💣 Monte Carlo Minesweeper</h3>
+                                    <span class="project-lang"><span class="lang-dot lang-js"></span> JavaScript</span>
+                                </div>
+                            </div>
+                            <p>An advanced minesweeper implementation combining traditional gameplay with probability theory. Features Monte Carlo simulation for precise survival probabilities, entropy analysis for maximum information gain, and real-time strategic insights.</p>
+                            <div class="project-features">
+                                <div class="feature-item">✓ Monte Carlo probability simulation</div>
+                                <div class="feature-item">✓ Entropy-based information theory</div>
+                                <div class="feature-item">✓ Smart move recommendations</div>
+                                <div class="feature-item">✓ Real-time probability visualization</div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://minesweeper.otischan.dev/" target="_blank" class="project-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                    Play Game
+                                </a>
+                                <a href="https://github.com/otischan-dev/montecarlo_entropy_minesweeper" target="_blank" class="project-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                    View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="projects">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <p class="section-subtitle">Tools and applications</p>
+                
+                <div class="project-featured">
+                    <div class="project-card project-card-large">
+                        <div class="project-content">
+                            <div class="project-header">
+                                <div>
+                                    <h3>🔊 Chrome Read Aloud Extension</h3>
+                                    <span class="project-lang"><span class="lang-dot lang-js"></span> JavaScript</span>
+                                </div>
+                            </div>
+                            <p>A Chrome extension that allows users to highlight text on any webpage and have it read aloud. Features adjustable reading speed and PDF support for an enhanced reading experience.</p>
+                            <div class="project-features">
+                                <div class="feature-item">✓ Highlight text and have it read aloud</div>
+                                <div class="feature-item">✓ Context menu integration for easy access</div>
+                                <div class="feature-item">✓ Adjustable reading speed</div>
+                                <div class="feature-item">✓ PDF document support</div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/otischan-dev/chrome_readaloud_extension" target="_blank" class="project-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                    View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <div class="container">
+                <h2 class="section-title" data-lang="en">Let's Connect</h2>
+                <h2 class="section-title" data-lang="zh">聯繫我</h2>
+                <p class="section-subtitle" data-lang="en">Feel free to reach out for collaborations or just a friendly chat</p>
+                <p class="section-subtitle" data-lang="zh">歡迎交流棋藝或任何話題</p>
+                <div class="contact-links">
+                    <a href="https://github.com/otischan-dev" target="_blank" class="contact-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/otischan-dev/" target="_blank" class="contact-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        LinkedIn
+                    </a>
+                </div>
+                
+                <div class="qr-section">
+                    <div class="qr-card">
+                        <div class="qr-title">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            Scan to visit this page
+                        </div>
+                        <div class="qr-container">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://otischan.dev&format=svg" alt="QR Code for otischan.dev">
+                        </div>
+                        <p class="qr-hint">otischan.dev</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p data-lang="en">© 2026 Otis Chan. <span class="beta-badge">BETA</span></p>
+            <p data-lang="zh">© 2026 陳煒康. <span class="beta-badge">BETA</span></p>
+        </div>
+    </footer>
+
+    <script>
+        // Language switching
+        function switchLang(lang) {
+            document.documentElement.setAttribute('lang', lang);
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.getAttribute('data-switch') === lang);
+            });
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(15, 23, 42, 0.95)';
+            } else {
+                header.style.background = 'rgba(15, 23, 42, 0.8)';
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Animate cards on scroll
+        document.querySelectorAll('.skill-card, .project-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
