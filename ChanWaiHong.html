@@ -20,6 +20,18 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="zh_HK">
     
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="陳煒康 | 中國象棋冠軍">
+    <meta name="twitter:description" content="業餘中國象棋愛好者，香港棋王趙汝權紀念盃中國象棋比賽新秀組冠軍。">
+    <meta name="twitter:image" content="https://otischan.dev/champion1.jpg">
+    
+    <!-- Robots -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="author" content="陳煒康">
+    <meta name="theme-color" content="#c0392b">
+    
     <!-- Favicon -->
     <link rel="icon" type="image/webp" href="profilepic.webp">
     <link rel="apple-touch-icon" href="profilepic.webp">
@@ -27,6 +39,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "陳煒康",
+  "alternateName": ["Otis Chan", "Chan Wai Hong"],
+  "description": "業餘中國象棋愛好者，香港棋王趙汝權紀念盃中國象棋比賽新秀組冠軍",
+  "url": "https://otischan.dev/ChanWaiHong.html",
+  "image": "https://otischan.dev/champion1.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "香港",
+    "addressCountry": "HK"
+  },
+  "sameAs": [
+    "https://www.facebook.com/lodg1111/"
+  ],
+  "knowsAbout": [
+    "中國象棋",
+    "象棋佈局",
+    "象棋中盤戰術",
+    "象棋殘局"
+  ],
+  "award": "香港棋王趙汝權紀念盃中國象棋比賽 新秀組 冠軍"
+}
+    </script>
     
     <style>
         /* White background with Red/Black text (hkcca style) */
@@ -354,6 +394,8 @@
             flex-wrap: wrap;
             gap: 8px;
             margin-top: 16px;
+            list-style: none;
+            padding: 0;
         }
 
         .skill-tag {
@@ -524,103 +566,103 @@
 <body>
     <div class="bg-animation"></div>
 
-    <header>
-        <nav class="container">
-            <a href="/" class="logo-circle" title="English">EN</a>
-            <ul class="nav-links">
-                <li><a href="#about">關於</a></li>
-                <li><a href="#skills">技藝</a></li>
-                <li><a href="#contact">聯絡方法</a></li>
+    <header role="banner">
+        <nav class="container" aria-label="主要導航">
+            <a href="/" class="logo-circle" title="English" aria-label="切換至英文版">EN</a>
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="#about" role="menuitem">關於</a></li>
+                <li role="none"><a href="#skills" role="menuitem">技藝</a></li>
+                <li role="none"><a href="#contact" role="menuitem">聯絡方法</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="hero" id="about">
+    <main role="main">
+        <section class="hero" id="about" aria-labelledby="hero-heading">
             <div class="container">
-                <div class="hero-content">
+                <article class="hero-content">
                     <div class="hero-text">
-                        <h1>大家好，我是<span>陳煒康</span></h1>
+                        <h1 id="hero-heading">大家好，我是<span>陳煒康</span></h1>
                         <p class="subtitle">業餘中國象棋愛好者</p>
-                        <p class="location"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> 香港</p>
+                        <p class="location"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> 香港</p>
                         <p>熱愛中國象棋，在棋盤上追求智慧與策略的極致。相信每一步棋都是思維的鍛煉，每一局對弈都是成長的機會。</p>
-                        <div class="certification-badge">
+                        <div class="certification-badge" role="img" aria-label="香港棋王趙汝權紀念盃中國象棋比賽新秀組冠軍">
                             <div class="certification-info">
                                 <div class="certification-title">🏆 香港棋王趙汝權紀念盃 新秀組 冠軍</div>
                             </div>
                         </div>
                     </div>
-                    <div class="hero-image">
+                    <figure class="hero-image">
                         <div class="champion-photo">
-                            <a href="champion1.jpg" target="_blank" title="點擊查看大圖">
-                                <img src="champion1.jpg" alt="陳煒康 - 香港棋王趙汝權紀念盃新秀組冠軍">
+                            <a href="champion1.jpg" target="_blank" title="點擊查看大圖" aria-label="查看陳煒康冠軍照片大圖">
+                                <img src="champion1.jpg" alt="陳煒康 - 香港棋王趙汝權紀念盃新秀組冠軍" width="420" height="420" loading="lazy">
                             </a>
                         </div>
-                    </div>
-                </div>
+                    </figure>
+                </article>
             </div>
         </section>
 
-        <section class="section" id="skills">
+        <section class="section" id="skills" aria-labelledby="skills-heading">
             <div class="container">
-                <h2 class="section-title">象棋技藝</h2>
+                <h2 class="section-title" id="skills-heading">象棋技藝</h2>
                 <p class="section-subtitle">中國象棋方面的技能與心得</p>
                 <div class="skills-grid">
-                    <div class="skill-card">
-                        <div class="skill-icon">♟️</div>
+                    <article class="skill-card">
+                        <div class="skill-icon" aria-hidden="true">♟️</div>
                         <h3>佈局研究</h3>
                         <p>深入研究中國象棋各類開局佈局，掌握先手與後手的戰略要領。</p>
-                        <div class="skill-tags">
-                            <span class="skill-tag">中炮</span>
-                            <span class="skill-tag">飛相局</span>
-                            <span class="skill-tag">仙人指路</span>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">🧠</div>
+                        <ul class="skill-tags" aria-label="佈局研究相關標籤">
+                            <li class="skill-tag">中炮</li>
+                            <li class="skill-tag">飛相局</li>
+                            <li class="skill-tag">仙人指路</li>
+                        </ul>
+                    </article>
+                    <article class="skill-card">
+                        <div class="skill-icon" aria-hidden="true">🧠</div>
                         <h3>中盤戰術</h3>
                         <p>擅長在中盤複雜局面中尋找突破口，運用戰術組合取得優勢。</p>
-                        <div class="skill-tags">
-                            <span class="skill-tag">棄子攻殺</span>
-                            <span class="skill-tag">牽制戰術</span>
-                            <span class="skill-tag">閃擊</span>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">🎯</div>
+                        <ul class="skill-tags" aria-label="中盤戰術相關標籤">
+                            <li class="skill-tag">棄子攻殺</li>
+                            <li class="skill-tag">牽制戰術</li>
+                            <li class="skill-tag">閃擊</li>
+                        </ul>
+                    </article>
+                    <article class="skill-card">
+                        <div class="skill-icon" aria-hidden="true">🎯</div>
                         <h3>殘局功夫</h3>
                         <p>精研各類殘局定式，在殘局階段能夠精準計算，把握勝機。</p>
-                        <div class="skill-tags">
-                            <span class="skill-tag">馬兵殘局</span>
-                            <span class="skill-tag">車兵殘局</span>
-                            <span class="skill-tag">炮兵殘局</span>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">📖</div>
+                        <ul class="skill-tags" aria-label="殘局功夫相關標籤">
+                            <li class="skill-tag">馬兵殘局</li>
+                            <li class="skill-tag">車兵殘局</li>
+                            <li class="skill-tag">炮兵殘局</li>
+                        </ul>
+                    </article>
+                    <article class="skill-card">
+                        <div class="skill-icon" aria-hidden="true">📖</div>
                         <h3>棋譜研讀</h3>
                         <p>研讀古今名局棋譜，從大師的對弈中汲取經驗與靈感。</p>
-                        <div class="skill-tags">
-                            <span class="skill-tag">橘中秘</span>
-                            <span class="skill-tag">梅花譜</span>
-                            <span class="skill-tag">現代名局</span>
-                        </div>
-                    </div>
+                        <ul class="skill-tags" aria-label="棋譜研讀相關標籤">
+                            <li class="skill-tag">橘中秘</li>
+                            <li class="skill-tag">梅花譜</li>
+                            <li class="skill-tag">現代名局</li>
+                        </ul>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section class="contact section" id="contact">
+        <section class="contact section" id="contact" aria-labelledby="contact-heading">
             <div class="container">
-                <h2 class="section-title">聯絡方法</h2>
+                <h2 class="section-title" id="contact-heading">聯絡方法</h2>
                 <p class="section-subtitle">歡迎交流棋藝或任何話題</p>
                 <div class="contact-links">
-                    <a href="mailto:contact@otischan.dev" class="contact-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    <a href="mailto:contact@otischan.dev" class="contact-btn" aria-label="發送電郵至 contact@otischan.dev">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                         contact@otischan.dev
                     </a>
-                    <a href="https://www.facebook.com/lodg1111/" target="_blank" class="contact-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    <a href="https://www.facebook.com/lodg1111/" target="_blank" rel="noopener noreferrer" class="contact-btn" aria-label="前往 Facebook 專頁">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                         Facebook
                     </a>
                 </div>
@@ -628,11 +670,11 @@
                 <div class="qr-section">
                     <div class="qr-card">
                         <div class="qr-title">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
                             <span>掃描二維碼訪問</span>
                         </div>
                         <div class="qr-container">
-                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://otischan.dev/ChanWaiHong.html&format=svg" alt="QR Code">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://otischan.dev/ChanWaiHong.html&format=svg" alt="掃描此二維碼訪問 otischan.dev/ChanWaiHong.html" width="160" height="160" loading="lazy">
                         </div>
                         <p class="qr-hint">otischan.dev/ChanWaiHong.html</p>
                     </div>
@@ -641,7 +683,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer role="contentinfo">
         <div class="container">
             <p>© 2026 陳煒康.</p>
         </div>
