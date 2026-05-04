@@ -7,6 +7,11 @@
     <title>Otis Chan | Test Lead @ Oxford University Press</title>
     <link rel="canonical" href="https://otischan.dev/">
     
+    <!-- hreflang: point to Chinese version -->
+    <link rel="alternate" hreflang="en" href="https://otischan.dev/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://otischan.dev/ChanWaiHong.html">
+    <link rel="alternate" hreflang="x-default" href="https://otischan.dev/">
+    
     <!-- Open Graph meta tags for social sharing -->
     <meta property="og:title" content="Otis Chan | Test Lead @ Oxford University Press">
     <meta property="og:description" content="Test automation expert with 6+ years of experience building robust frameworks.">
@@ -158,6 +163,13 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            text-decoration: none;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .logo:hover {
+            opacity: 0.7;
         }
 
         .nav-links {
@@ -735,7 +747,7 @@
 
     <header>
         <nav class="container">
-            <div class="logo">OC</div>
+            <a href="/ChanWaiHong.html" class="logo" title="中文版">中文</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
